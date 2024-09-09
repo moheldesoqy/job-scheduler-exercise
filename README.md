@@ -17,6 +17,14 @@
 6. AWS EC2
 7. Docker
 
+## Scaling
+
+When it comes to following the microservices approach during the deployment process, one of the best ways to optimize scaling & communication between APIs is deployment using AWS's Elastic Container Services, or Elastic Kubernetes Services. We can essentially build an efficient CI/CD that gives the APIs the ability to communicate with each other, we can create an AWS Elastic Kubernetes Service cluster, and connect it with Bitbucket Pipeliens by following their official documentation:
+
+https://support.atlassian.com/bitbucket-cloud/docs/deploy-to-aws-eks-kubernetes/
+
+AWS also provides us with AWS Auto Scaling, for automatic adjustment of the traffic load on our instances that are running on the EKS cluster.
+
 ## Installation
 
 ```bash
@@ -32,3 +40,4 @@ $ npm run build
 
 #Start the project & enter file name
 $ npm run start:dev
+
