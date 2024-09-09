@@ -1,0 +1,32 @@
+
+@hostname = localhost
+@port = 8080
+@host = {{hostname}}:{{port}}
+@commonPath = jobs
+@baseUrl = http://{{host}}/{{commonPath}}
+
+###
+### List of jobs
+###
+GET {{baseUrl}}
+
+###
+### Singular job details
+###
+GET {{baseUrl}}/d0bb31fa-3d6b-4f45-8a08-c5ab423c9e35
+
+###
+### Add job
+###
+POST {{baseUrl}}
+{
+  "name": "Email notifications",
+  "description": "Sends an email notification to the customers every week",
+  "status": "scheduled",
+  "creationDate": "2024-09-01T08:00:00Z",
+  "updateDate": "2024-09-03T10:30:00Z",
+  "runtime": "2 hours",
+  "nextRun": "2024-09-05T06:00:00Z",
+  "priority": "maximum",
+  "interval": "weekly"
+}
